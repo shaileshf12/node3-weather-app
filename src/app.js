@@ -1,5 +1,8 @@
 
 const express = require('express')
+const port = process.env.PORT || 3000
+
+
 const path = require('path')
 const hbs = require('hbs')
 
@@ -106,6 +109,6 @@ app.get('*', (req, res)=>{
     })
 })
 
-app.listen(3000, ()=>{
-    console.log("Listening to port 3000")
+app.listen(port, ()=>{
+    console.log("Listening to port "+ port)
 })
