@@ -1,4 +1,6 @@
 
+//Production - Heroku
+
 const express = require('express')
 const port = process.env.PORT || 3000
 
@@ -33,15 +35,9 @@ app.get('', (req, res)=>{
 
 
 app.get('/help', (req, res)=>{
-    res.send([{
-        name : 'Shailesh',
-        age : 25
-    },
-    {
-        name : 'Mack',
-        age : 40
-    }
-])
+    res.render('help', {
+        title : 'Help Me'
+    })
 })
 
 app.get('/about', (req, res)=>{
